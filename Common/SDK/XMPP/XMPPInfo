@@ -1,0 +1,9 @@
+XMPP连接
+
+1.初始化XMPPStream, _xmppReconnect
+2.初始化HostName, HostPort, JID
+3.[xmppStream connectWithTimeout]发送链接
+4.- (void)xmppStreamWillConnect:(XMPPStream *)sender//将要链接
+5.- (void)xmppStreamDidConnect:(XMPPStream *)sender//链接
+6.- (void)xmppStreamDidAuthenticate:(XMPPStream *)sender//认证
+7.- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence//获取好友列表

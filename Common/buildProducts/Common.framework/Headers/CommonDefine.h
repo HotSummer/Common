@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 VIP. All rights reserved.
 //
 
-//#ifndef Common_CommonDefine_h
-//#define Common_CommonDefine_h
+#ifndef Common_CommonDefine_h
+#define Common_CommonDefine_h
 
 #define NSMethodLog(msg) NSLog(@"Line:%d,Func:%s,%@",__LINE__,__func__,msg)
 
@@ -48,11 +48,11 @@
 
 //SINGLETON
 #define DECLARE_AS_SINGLETON(interfaceName)               \
-+ (interfaceName*)ShareInstance;                        \
++ (interfaceName*)shareInstance;                        \
 
 #define DEFINE_SINGLETON(interfaceName)                     \
 static interfaceName* interfaceName##Instance = nil;             \
-+ (interfaceName*)ShareInstance                          \
++ (interfaceName*)shareInstance                          \
 {                                                          \
 static dispatch_once_t onceToken;                           \
 dispatch_once(&onceToken, ^{                                \
@@ -63,4 +63,13 @@ interfaceName##Instance = [[interfaceName alloc] init];        \
 return interfaceName##Instance;            \
 }
 
-//#endif
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
+#define MULTILINE_TEXTSIZE(text, font, maxSize, mode) [text length] > 0 ? [text \
+boundingRectWithSize:maxSize options:(NSStringDrawingUsesLineFragmentOrigin) \
+attributes:@{NSFontAttributeName:font} context:nil].size : CGSizeZero;
+#else
+#define MULTILINE_TEXTSIZE(text, font, maxSize, mode) [text length] > 0 ? [text \
+sizeWithFont:font constrainedToSize:maxSize lineBreakMode:mode] : CGSizeZero;
+#endif
+
+#endif

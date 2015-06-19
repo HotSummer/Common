@@ -48,11 +48,11 @@
 
 //SINGLETON
 #define DECLARE_AS_SINGLETON(interfaceName)               \
-+ (interfaceName*)ShareInstance;                        \
++ (interfaceName*)shareInstance;                        \
 
 #define DEFINE_SINGLETON(interfaceName)                     \
 static interfaceName* interfaceName##Instance = nil;             \
-+ (interfaceName*)ShareInstance                          \
++ (interfaceName*)shareInstance                          \
 {                                                          \
 static dispatch_once_t onceToken;                           \
 dispatch_once(&onceToken, ^{                                \
