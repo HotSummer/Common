@@ -25,6 +25,11 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 @property (nonatomic, strong) XMPPRosterCoreDataStorage *xmppRosterStorage;
 @property (nonatomic, strong) XMPPRoster *xmppRoster;
 @property (nonatomic, strong) XMPPReconnect *xmppReconnect;
+@property (nonatomic, strong) XMPPvCardCoreDataStorage *xmppvCardStorage;
+@property (nonatomic, strong) XMPPvCardTempModule *xmppvCardTempModule;
+@property (nonatomic, strong) XMPPvCardAvatarModule *xmppvCardAvatarModule;
+@property (nonatomic, strong) XMPPCapabilities *xmppCapabilities;
+@property (nonatomic, strong) XMPPCapabilitiesCoreDataStorage *xmppCapabilitiesStorage;
 
 @property (nonatomic, strong) XMPPMessageArchivingCoreDataStorage *xmppMessageArchivingCoreDataStorage;
 @property (nonatomic, strong) XMPPMessageArchiving *xmppMessageArchivingModule;
@@ -48,10 +53,79 @@ DEFINE_SINGLETON(XMPPHelper);
     [_xmppRoster addDelegate:self delegateQueue:dispatch_get_main_queue()];
     
     _xmppMessageArchivingCoreDataStorage = [XMPPMessageArchivingCoreDataStorage sharedInstance];
-    _xmppMessageArchivingModule = [[XMPPMessageArchiving alloc]initWithMessageArchivingStorage:_xmppMessageArchivingCoreDataStorage];
+    _xmppMessageArchivingModule = [[XMPPMessageArchiving alloc] initWithMessageArchivingStorage:_xmppMessageArchivingCoreDataStorage];
     [_xmppMessageArchivingModule setClientSideMessageArchivingOnly:YES];
     [_xmppMessageArchivingModule activate:_xmppStream];
     [_xmppMessageArchivingModule addDelegate:self delegateQueue:dispatch_get_main_queue()];
+    
+//    _xmppRoster.autoFetchRoster = YES;
+//    _xmppRoster.autoAcceptKnownPresenceSubscriptionRequests = YES;
+//    
+//    // Setup vCard support
+//    //
+//    // The vCard Avatar module works in conjuction with the standard vCard Temp module to download user avatars.
+//    // The XMPPRoster will automatically integrate with XMPPvCardAvatarModule to cache roster photos in the roster.
+//    
+//    _xmppvCardStorage = [XMPPvCardCoreDataStorage sharedInstance];
+//    _xmppvCardTempModule = [[XMPPvCardTempModule alloc] initWithvCardStorage:_xmppvCardStorage];
+//    
+//    _xmppvCardAvatarModule = [[XMPPvCardAvatarModule alloc] initWithvCardTempModule:_xmppvCardTempModule];
+//    
+//    // Setup capabilities
+//    //
+//    // The XMPPCapabilities module handles all the complex hashing of the caps protocol (XEP-0115).
+//    // Basically, when other clients broadcast their presence on the network
+//    // they include information about what capabilities their client supports (audio, video, file transfer, etc).
+//    // But as you can imagine, this list starts to get pretty big.
+//    // This is where the hashing stuff comes into play.
+//    // Most people running the same version of the same client are going to have the same list of capabilities.
+//    // So the protocol defines a standardized way to hash the list of capabilities.
+//    // Clients then broadcast the tiny hash instead of the big list.
+//    // The XMPPCapabilities protocol automatically handles figuring out what these hashes mean,
+//    // and also persistently storing the hashes so lookups aren't needed in the future.
+//    //
+//    // Similarly to the roster, the storage of the module is abstracted.
+//    // You are strongly encouraged to persist caps information across sessions.
+//    //
+//    // The XMPPCapabilitiesCoreDataStorage is an ideal solution.
+//    // It can also be shared amongst multiple streams to further reduce hash lookups.
+//    
+//    _xmppCapabilitiesStorage = [XMPPCapabilitiesCoreDataStorage sharedInstance];
+//    _xmppCapabilities = [[XMPPCapabilities alloc] initWithCapabilitiesStorage:_xmppCapabilitiesStorage];
+//    
+//    _xmppCapabilities.autoFetchHashedCapabilities = YES;
+//    _xmppCapabilities.autoFetchNonHashedCapabilities = NO;
+//    
+//    // Activate xmpp modules
+//    
+//    [_xmppReconnect         activate:_xmppStream];
+//    [_xmppRoster            activate:_xmppStream];
+//    [_xmppvCardTempModule   activate:_xmppStream];
+//    [_xmppvCardAvatarModule activate:_xmppStream];
+//    [_xmppCapabilities      activate:_xmppStream];
+//    
+//    // Add ourself as a delegate to anything we may be interested in
+//    
+//    [_xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
+//    [_xmppRoster addDelegate:self delegateQueue:dispatch_get_main_queue()];
+//    
+//    // Optional:
+//    //
+//    // Replace me with the proper domain and port.
+//    // The example below is setup for a typical google talk account.
+//    //
+//    // If you don't supply a hostName, then it will be automatically resolved using the JID (below).
+//    // For example, if you supply a JID like 'user@quack.com/rsrc'
+//    // then the xmpp framework will follow the xmpp specification, and do a SRV lookup for quack.com.
+//    //
+//    // If you don't specify a hostPort, then the default (5222) will be used.
+//    
+//    //	[xmppStream setHostName:@"talk.google.com"];
+//    //	[xmppStream setHostPort:5222];	
+//    
+//    
+//    // You may need to alter these settings depending on the server you're connecting to
+////    _customCertEvaluation = YES;
 }
 
 - (BOOL)connect:(NSString *)userId
