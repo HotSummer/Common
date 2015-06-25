@@ -8,6 +8,7 @@
 
 #import "XMPPHelper.h"
 #import "XMPPMessageArchivingCoreDataStorage.h"
+#import "FriendModel.h"
 #import "XMPPConfig.h"
 #import "DDLog.h"
 
@@ -20,6 +21,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 @property (nonatomic, copy) XMPPStreamBlock willConnectBlock;
 @property (nonatomic, copy) XMPPStreamBlock didConnectBlock;
 @property (nonatomic, copy) XMPPStreamBlock didAuthenticateBlock;
+@property (nonatomic, copy) XMPPStreamBlock receivedIQBlock;
 
 @property (nonatomic, strong) XMPPStream *xmppStream;
 @property (nonatomic, strong) XMPPRosterCoreDataStorage *xmppRosterStorage;
@@ -40,6 +42,13 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 DEFINE_SINGLETON(XMPPHelper);
 
+- (id)init{
+    if (self = [super init]) {
+        _friends = [NSMutableArray array];
+    }
+    return self;
+}
+
 - (void)setupStream{
     if (!_xmppStream) {
         _xmppStream = [[XMPPStream alloc]init];
@@ -51,6 +60,7 @@ DEFINE_SINGLETON(XMPPHelper);
         _xmppRosterStorage = [[XMPPRosterCoreDataStorage alloc]init];
         _xmppRoster = [[XMPPRoster alloc]initWithRosterStorage:_xmppRosterStorage];
         [_xmppRoster activate:self.xmppStream];
+        
         [_xmppRoster addDelegate:self delegateQueue:dispatch_get_main_queue()];
         
         _xmppMessageArchivingCoreDataStorage = [XMPPMessageArchivingCoreDataStorage sharedInstance];
@@ -130,11 +140,29 @@ DEFINE_SINGLETON(XMPPHelper);
 ////    _customCertEvaluation = YES;
 }
 
+- (void)teardownStream{
+    [_xmppStream removeDelegate:self];
+    [_xmppRoster removeDelegate:self];
+    
+    [_xmppReconnect         deactivate];
+    [_xmppRoster            deactivate];
+    [_xmppMessageArchivingModule deactivate];
+    
+    [_xmppStream disconnect];
+    
+    _xmppStream = nil;
+    _xmppReconnect = nil;
+    _xmppRoster = nil;
+    _xmppRosterStorage = nil;
+    _xmppMessageArchivingCoreDataStorage = nil;
+}
+
 - (BOOL)connect:(NSString *)userId
        password:(NSString *)password
     willConnect:(XMPPStreamBlock)willConnect
      didConnect:(XMPPStreamBlock)didConnect
-didAuthenticate:(XMPPStreamBlock)didAuthenticate{
+didAuthenticate:(XMPPStreamBlock)didAuthenticate
+      receiveIQ:(XMPPStreamBlock)receiveIQ{
     if (userId.length == 0) {
         return NO;
     }
@@ -143,6 +171,7 @@ didAuthenticate:(XMPPStreamBlock)didAuthenticate{
     _willConnectBlock = willConnect;
     _didConnectBlock = didConnect;
     _didAuthenticateBlock = didAuthenticate;
+    _receivedIQBlock = receiveIQ;
     
     [[self xmppStream] setHostName:XMPPServerIP];
     [[self xmppStream] setHostPort:[XMPPPort integerValue]];
@@ -161,7 +190,32 @@ didAuthenticate:(XMPPStreamBlock)didAuthenticate{
     return YES;
 }
 
-#pragma mark - XMPPStreamDelegate
+
+- (void)goOnline{
+    XMPPPresence *presence = [XMPPPresence presence]; // type="available" is implicit
+    NSString *domain = [_xmppStream.myJID domain];
+    
+    //Google set their presence priority to 24, so we do the same to be compatible.
+    
+    if([domain isEqualToString:@"gmail.com"]
+       || [domain isEqualToString:@"gtalk.com"]
+       || [domain isEqualToString:@"talk.google.com"])
+    {
+        NSXMLElement *priority = [NSXMLElement elementWithName:@"priority" stringValue:@"24"];
+        [presence addChild:priority];
+    }
+    
+    [[self xmppStream] sendElement:presence];
+}
+
+- (void)goOffline
+{
+    XMPPPresence *presence = [XMPPPresence presenceWithType:@"unavailable"];
+    
+    [[self xmppStream] sendElement:presence];
+}
+
+#pragma mark - XMPPStreamDelegate Connect
 
 - (void)xmppStreamWillConnect:(XMPPStream *)sender
 {
@@ -180,6 +234,7 @@ didAuthenticate:(XMPPStreamBlock)didAuthenticate{
     //    }
 }
 
+//注册新用户的时候调用
 - (void)xmppStreamDidRegister:(XMPPStream *)sender
 {
     NSLog(@"xmppStreamDidRegister");
@@ -192,6 +247,8 @@ didAuthenticate:(XMPPStreamBlock)didAuthenticate{
 //        }
 //    }
 }
+
+//注册新用户的时候出错的时候调用
 - (void)xmppStream:(XMPPStream *)sender didNotRegister:(NSXMLElement *)error
 {
     NSLog(@"didNotRegister:%@", error.description);
@@ -230,5 +287,104 @@ didAuthenticate:(XMPPStreamBlock)didAuthenticate{
     _didConnectBlock(error.description, sender);
 }
 
+//链接成功后会返回好友信息
+/*
+ 一个 IQ 响应：
+ <iq
+ xmlns="jabber:client" type="result" id="0ABFD97C-E6FB-4E4C-895B-3B60BAD34FE4" to="nxjwalqyh@win-p3hh36c8kuq/XMPPIOS@182.254.153.66/XMPPIOS">
+ <query
+ xmlns="jabber:iq:roster">
+ <item jid="mrs@win-p3hh36c8kuq" name="mrs" subscription="both">
+ <group>Friends</group>
+ </item>
+ <item jid="yh" name="yh" subscription="none"></item>
+ </query>
+ </iq>
+ */
+- (BOOL)xmppStream:(XMPPStream *)sender didReceiveIQ:(XMPPIQ *)iq
+{
+    DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
+    [_friends removeAllObjects];
+    if ([@"result" isEqualToString:iq.type]) {
+        NSXMLElement *query = iq.childElement;
+        if ([@"query" isEqualToString:query.name]) {
+            NSArray *items = [query children];
+            for (NSXMLElement *item in items) {
+                NSString *jid = [item attributeStringValueForName:@"jid"];
+                XMPPJID *xmppJID = [XMPPJID jidWithString:jid];
+                FriendModel *friend = [[FriendModel alloc] init];
+                friend.jid = xmppJID;
+                
+                NSString *name = [item attributeStringValueForName:@"name"];
+                friend.name = name;
+                
+                NSString *subscription = [item attributeStringValueForName:@"subscription"];
+                friend.subScription = subscription;
+                
+                NSArray *groups = [item children];
+                NSMutableArray *mutliGroup = [NSMutableArray array];
+                for (NSXMLElement *group in groups) {
+                    NSString *strGroupName = [group stringValue];
+                    [mutliGroup addObject:strGroupName];
+                }
+                friend.groups = mutliGroup;
+                
+                [_friends addObject:friend];
+            }
+        }
+    }
+    if (_receivedIQBlock) {
+        _receivedIQBlock(@"", sender);
+    }
+    return NO;
+}
+
+- (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message
+{
+    DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
+    
+    // A simple example of inbound message handling.
+    
+//    if ([message isChatMessageWithBody])
+//    {
+//        XMPPUserCoreDataStorageObject *user = [_xmppRosterStorage userForJID:[message from]
+//                                                                 xmppStream:_xmppStream
+//                                                       managedObjectContext:[self managedObjectContext_roster]];
+//        
+//        NSString *body = [[message elementForName:@"body"] stringValue];
+//        NSString *displayName = [user displayName];
+//        
+//        if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateActive)
+//        {
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:displayName
+//                                                                message:body
+//                                                               delegate:nil
+//                                                      cancelButtonTitle:@"Ok"
+//                                                      otherButtonTitles:nil];
+//            [alertView show];
+//        }
+//        else
+//        {
+//            // We are not active, so use a local notification instead
+//            UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+//            localNotification.alertAction = @"Ok";
+//            localNotification.alertBody = [NSString stringWithFormat:@"From: %@\n\n%@",displayName,body];
+//            
+//            [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+//        }
+//    }
+}
+
+- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence
+{
+    DDLogVerbose(@"%@: %@ - %@", THIS_FILE, THIS_METHOD, [presence fromStr]);
+    
+    
+}
+
+- (void)xmppStream:(XMPPStream *)sender didReceiveError:(id)error
+{
+    DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
+}
 
 @end

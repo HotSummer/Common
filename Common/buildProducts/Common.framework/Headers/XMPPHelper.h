@@ -12,6 +12,8 @@
 
 @interface XMPPHelper : NSObject
 
+@property(nonatomic, strong) NSMutableArray *friends;
+
 DECLARE_AS_SINGLETON(XMPPHelper);
 
 //初始化XMPP
@@ -25,6 +27,7 @@ DECLARE_AS_SINGLETON(XMPPHelper);
  *  @param willConnect     将要链接的block
  *  @param didConnect      已经链接的block
  *  @param didAuthenticate 验证通过block
+ *  @param receiveIQ       接收到好友信息
  *
  *  @return 是否连接成功
  */
@@ -32,7 +35,24 @@ DECLARE_AS_SINGLETON(XMPPHelper);
        password:(NSString *)password
     willConnect:(XMPPStreamBlock)willConnect
      didConnect:(XMPPStreamBlock)didConnect
-didAuthenticate:(XMPPStreamBlock)didAuthenticate;
+didAuthenticate:(XMPPStreamBlock)didAuthenticate
+      receiveIQ:(XMPPStreamBlock)receiveIQ;
+
+
+/**
+ *  中断长链接
+ */
+- (void)teardownStream;
+
+/**
+ *  上线
+ */
+- (void)goOnline;
+
+/**
+ *  下线
+ */
+- (void)goOffline;
 
 
 @end

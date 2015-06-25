@@ -344,6 +344,8 @@
 		4E6B3A6A1B25A0BB00CA08E0 /* UIImageView+SDWebImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6B3A681B25A0BB00CA08E0 /* UIImageView+SDWebImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6B3A6B1B25A0BB00CA08E0 /* UIImageView+SDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6B3A691B25A0BB00CA08E0 /* UIImageView+SDWebImage.m */; };
 		4EC765CB1B2939B100F0B4A2 /* XMPPInfo in Resources */ = {isa = PBXBuildFile; fileRef = 4EC765CA1B2939B100F0B4A2 /* XMPPInfo */; };
+		4EF2110D1B3BFF7500D07F42 /* FriendModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EF2110B1B3BFF7500D07F42 /* FriendModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4EF2110E1B3BFF7500D07F42 /* FriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2110C1B3BFF7500D07F42 /* FriendModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -693,6 +695,8 @@
 		4E6B3A681B25A0BB00CA08E0 /* UIImageView+SDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDWebImage.h"; sourceTree = "<group>"; };
 		4E6B3A691B25A0BB00CA08E0 /* UIImageView+SDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDWebImage.m"; sourceTree = "<group>"; };
 		4EC765CA1B2939B100F0B4A2 /* XMPPInfo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XMPPInfo; sourceTree = "<group>"; };
+		4EF2110B1B3BFF7500D07F42 /* FriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendModel.h; sourceTree = "<group>"; };
+		4EF2110C1B3BFF7500D07F42 /* FriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1725,6 +1729,8 @@
 				4E0B5C111B33C06D00C1747A /* XMPPDefine.h */,
 				4E3693301B2FF005001207E0 /* XMPPHelper.h */,
 				4E3693311B2FF005001207E0 /* XMPPHelper.m */,
+				4EF2110B1B3BFF7500D07F42 /* FriendModel.h */,
+				4EF2110C1B3BFF7500D07F42 /* FriendModel.m */,
 			);
 			path = XMPP;
 			sourceTree = "<group>";
@@ -1736,6 +1742,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EF2110D1B3BFF7500D07F42 /* FriendModel.h in Headers */,
 				4E0B5B541B33BCED00C1747A /* XMPPRoomOccupant.h in Headers */,
 				4E0B5B291B33BCED00C1747A /* XMPPUser.h in Headers */,
 				4E0B5AE81B33BCED00C1747A /* XMPPSASLAuthentication.h in Headers */,
@@ -2041,6 +2048,7 @@
 				4E0B5BCE1B33BCED00C1747A /* DDList.m in Sources */,
 				4E6B3A5F1B2597E400CA08E0 /* NSString+TPCategory.m in Sources */,
 				4E0B5BF31B33BCED00C1747A /* DDXMLDocument.m in Sources */,
+				4EF2110E1B3BFF7500D07F42 /* FriendModel.m in Sources */,
 				4E0B5AE61B33BCED00C1747A /* XMPPXOAuth2Google.m in Sources */,
 				4E0B5BE21B33BCED00C1747A /* DDFileLogger.m in Sources */,
 				4E0B5B331B33BCED00C1747A /* XMPPIQ+LastActivity.m in Sources */,
