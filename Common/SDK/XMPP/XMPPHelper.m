@@ -36,22 +36,24 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 DEFINE_SINGLETON(XMPPHelper);
 
 - (void)setupStream{
-    _xmppStream = [[XMPPStream alloc]init];
-    [_xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
-    
-    _xmppReconnect = [[XMPPReconnect alloc]init];
-    [_xmppReconnect activate:self.xmppStream];
-    
-    _xmppRosterStorage = [[XMPPRosterCoreDataStorage alloc]init];
-    _xmppRoster = [[XMPPRoster alloc]initWithRosterStorage:_xmppRosterStorage];
-    [_xmppRoster activate:self.xmppStream];
-    [_xmppRoster addDelegate:self delegateQueue:dispatch_get_main_queue()];
-    
-    _xmppMessageArchivingCoreDataStorage = [XMPPMessageArchivingCoreDataStorage sharedInstance];
-    _xmppMessageArchivingModule = [[XMPPMessageArchiving alloc]initWithMessageArchivingStorage:_xmppMessageArchivingCoreDataStorage];
-    [_xmppMessageArchivingModule setClientSideMessageArchivingOnly:YES];
-    [_xmppMessageArchivingModule activate:_xmppStream];
-    [_xmppMessageArchivingModule addDelegate:self delegateQueue:dispatch_get_main_queue()];
+    if (!_xmppStream) {
+        _xmppStream = [[XMPPStream alloc]init];
+        [_xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
+        
+        _xmppReconnect = [[XMPPReconnect alloc]init];
+        [_xmppReconnect activate:self.xmppStream];
+        
+        _xmppRosterStorage = [[XMPPRosterCoreDataStorage alloc]init];
+        _xmppRoster = [[XMPPRoster alloc]initWithRosterStorage:_xmppRosterStorage];
+        [_xmppRoster activate:self.xmppStream];
+        [_xmppRoster addDelegate:self delegateQueue:dispatch_get_main_queue()];
+        
+        _xmppMessageArchivingCoreDataStorage = [XMPPMessageArchivingCoreDataStorage sharedInstance];
+        _xmppMessageArchivingModule = [[XMPPMessageArchiving alloc]initWithMessageArchivingStorage:_xmppMessageArchivingCoreDataStorage];
+        [_xmppMessageArchivingModule setClientSideMessageArchivingOnly:YES];
+        [_xmppMessageArchivingModule activate:_xmppStream];
+        [_xmppMessageArchivingModule addDelegate:self delegateQueue:dispatch_get_main_queue()];
+    }
 }
 
 - (BOOL)connect:(NSString *)userId
@@ -71,7 +73,9 @@ didAuthenticate:(XMPPStreamBlock)didAuthenticate{
     [[self xmppStream] setHostName:XMPPServerIP];
     [[self xmppStream] setHostPort:[XMPPPort integerValue]];
     
-    XMPPJID *myjid = [XMPPJID jidWithString:userId];
+    NSString *jid = [NSString stringWithFormat:@"%@@182.254.153.66/XMPPIOS", userId];
+    
+    XMPPJID *myjid = [XMPPJID jidWithString:jid];
     NSError *error ;
     [_xmppStream setMyJID:myjid];
     if (![_xmppStream connectWithTimeout:XMPPStreamTimeoutNone error:&error]) {

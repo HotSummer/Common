@@ -35,4 +35,6 @@ DECLARE_AS_SINGLETON(XMPPHelper);
 didAuthenticate:(XMPPStreamBlock)didAuthenticate;
 
 
+
+
 @end
