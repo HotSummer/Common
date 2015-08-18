@@ -59,6 +59,8 @@ DEFINE_SINGLETON(XMPPHelper);
         
         _xmppRosterStorage = [[XMPPRosterCoreDataStorage alloc]init];
         _xmppRoster = [[XMPPRoster alloc]initWithRosterStorage:_xmppRosterStorage];
+        _xmppRoster.autoFetchRoster = YES;
+        _xmppRoster.autoAcceptKnownPresenceSubscriptionRequests = YES;
         [_xmppRoster activate:self.xmppStream];
         
         [_xmppRoster addDelegate:self delegateQueue:dispatch_get_main_queue()];
@@ -70,9 +72,8 @@ DEFINE_SINGLETON(XMPPHelper);
         [_xmppMessageArchivingModule addDelegate:self delegateQueue:dispatch_get_main_queue()];
     }
     
-//    _xmppRoster.autoFetchRoster = YES;
-//    _xmppRoster.autoAcceptKnownPresenceSubscriptionRequests = YES;
-//    
+    
+//
 //    // Setup vCard support
 //    //
 //    // The vCard Avatar module works in conjuction with the standard vCard Temp module to download user avatars.
