@@ -6,22 +6,6 @@
 5. 将原来的 _SDK_Template_ Group删除，把重命名的项目目录添加进去
 6. Build
 
-
-#Note
-需要引入第三方依赖，请修改BuildConfig格式为
-name=version
-例如
-Darwin=1.5
-
-所有第三方依赖的库都会以.framework的形式在Maven的Repository上进行管理。
-Nexus Repo:
-http://mvn1.tools.vipshop.com/nexus
-
-URL：
-http://mvn1.tools.vipshop.com/nexus/content/repositories/ios/com/vip/frameworks/
-
-URL可以看到每个组件的name和version，例如 Darwin=1.5
-
 Build完成之后，所有的组件都会放在项目根目录的frameworks中，通过项目的Framework Search Path进行定位（已默认配置），***注意***，不要把framework添加到Build Phase的Link With Library中，SDK中会包含这些包，多个SDK包含同一个包的时候，会产生duplicate issue。
 
 发布SDK framework的时候在真机和模拟器上都build一下，会产生两个.framework文件，需要进行合并，才能做到真机和模拟器上都能Build，具体步骤
