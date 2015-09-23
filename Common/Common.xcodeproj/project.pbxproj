@@ -346,6 +346,12 @@
 		4EC765CB1B2939B100F0B4A2 /* XMPPInfo in Resources */ = {isa = PBXBuildFile; fileRef = 4EC765CA1B2939B100F0B4A2 /* XMPPInfo */; };
 		4EF2110D1B3BFF7500D07F42 /* FriendModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EF2110B1B3BFF7500D07F42 /* FriendModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4EF2110E1B3BFF7500D07F42 /* FriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF2110C1B3BFF7500D07F42 /* FriendModel.m */; };
+		79AF9EBC1BB3128500D6AC08 /* SZBaseTabBarViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 79AF9EB61BB3128500D6AC08 /* SZBaseTabBarViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79AF9EBD1BB3128500D6AC08 /* SZBaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9EB71BB3128500D6AC08 /* SZBaseTabBarViewController.m */; };
+		79AF9EBE1BB3128500D6AC08 /* SZTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 79AF9EB81BB3128500D6AC08 /* SZTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79AF9EBF1BB3128500D6AC08 /* SZTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9EB91BB3128500D6AC08 /* SZTableViewController.m */; };
+		79AF9EC01BB3128500D6AC08 /* SZViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 79AF9EBA1BB3128500D6AC08 /* SZViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79AF9EC11BB3128500D6AC08 /* SZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9EBB1BB3128500D6AC08 /* SZViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -697,6 +703,12 @@
 		4EC765CA1B2939B100F0B4A2 /* XMPPInfo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XMPPInfo; sourceTree = "<group>"; };
 		4EF2110B1B3BFF7500D07F42 /* FriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendModel.h; sourceTree = "<group>"; };
 		4EF2110C1B3BFF7500D07F42 /* FriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendModel.m; sourceTree = "<group>"; };
+		79AF9EB61BB3128500D6AC08 /* SZBaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZBaseTabBarViewController.h; sourceTree = "<group>"; };
+		79AF9EB71BB3128500D6AC08 /* SZBaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZBaseTabBarViewController.m; sourceTree = "<group>"; };
+		79AF9EB81BB3128500D6AC08 /* SZTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTableViewController.h; sourceTree = "<group>"; };
+		79AF9EB91BB3128500D6AC08 /* SZTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTableViewController.m; sourceTree = "<group>"; };
+		79AF9EBA1BB3128500D6AC08 /* SZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZViewController.h; sourceTree = "<group>"; };
+		79AF9EBB1BB3128500D6AC08 /* SZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -749,6 +761,7 @@
 		21210B7919B8C162006199C3 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				79AF9EB51BB3128500D6AC08 /* UI */,
 				4EC765C71B29396400F0B4A2 /* XMPP */,
 				4E6B3A521B2591CA00CA08E0 /* Category */,
 				4E6B3A4D1B25883F00CA08E0 /* FileHelper */,
@@ -1735,6 +1748,19 @@
 			path = XMPP;
 			sourceTree = "<group>";
 		};
+		79AF9EB51BB3128500D6AC08 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				79AF9EB61BB3128500D6AC08 /* SZBaseTabBarViewController.h */,
+				79AF9EB71BB3128500D6AC08 /* SZBaseTabBarViewController.m */,
+				79AF9EB81BB3128500D6AC08 /* SZTableViewController.h */,
+				79AF9EB91BB3128500D6AC08 /* SZTableViewController.m */,
+				79AF9EBA1BB3128500D6AC08 /* SZViewController.h */,
+				79AF9EBB1BB3128500D6AC08 /* SZViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1742,6 +1768,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79AF9EBE1BB3128500D6AC08 /* SZTableViewController.h in Headers */,
+				79AF9EC01BB3128500D6AC08 /* SZViewController.h in Headers */,
+				79AF9EBC1BB3128500D6AC08 /* SZBaseTabBarViewController.h in Headers */,
 				4EF2110D1B3BFF7500D07F42 /* FriendModel.h in Headers */,
 				4E0B5B541B33BCED00C1747A /* XMPPRoomOccupant.h in Headers */,
 				4E0B5B291B33BCED00C1747A /* XMPPUser.h in Headers */,
@@ -2013,6 +2042,7 @@
 				4E0B5B3A1B33BCED00C1747A /* XMPPRoomCoreDataStorage.m in Sources */,
 				4E0B5B501B33BCED00C1747A /* XMPPMUC.m in Sources */,
 				4E6B3A651B259FF400CA08E0 /* UIColor+TPCategory.m in Sources */,
+				79AF9EC11BB3128500D6AC08 /* SZViewController.m in Sources */,
 				4E0B5AF11B33BCED00C1747A /* XMPPConstants.m in Sources */,
 				4E0B5BF51B33BCED00C1747A /* DDXMLElement.m in Sources */,
 				4E0B5B9C1B33BCED00C1747A /* XMPPMessageArchiving.m in Sources */,
@@ -2052,6 +2082,7 @@
 				4E0B5AE61B33BCED00C1747A /* XMPPXOAuth2Google.m in Sources */,
 				4E0B5BE21B33BCED00C1747A /* DDFileLogger.m in Sources */,
 				4E0B5B331B33BCED00C1747A /* XMPPIQ+LastActivity.m in Sources */,
+				79AF9EBF1BB3128500D6AC08 /* SZTableViewController.m in Sources */,
 				4E0B5B161B33BCED00C1747A /* XMPPGroupCoreDataStorageObject.m in Sources */,
 				4E0B5B8F1B33BCED00C1747A /* XMPPCapsCoreDataStorageObject.m in Sources */,
 				4E0B5B0A1B33BCED00C1747A /* XMPPFileTransfer.m in Sources */,
@@ -2142,6 +2173,7 @@
 				4E0B5B661B33BCED00C1747A /* XMPPvCardTempBase.m in Sources */,
 				4E0B5BE71B33BCED00C1747A /* DDTTYLogger.m in Sources */,
 				4E0B5B7A1B33BCED00C1747A /* XMPPIQ+XEP_0066.m in Sources */,
+				79AF9EBD1BB3128500D6AC08 /* SZBaseTabBarViewController.m in Sources */,
 				4E0B5BD61B33BCED00C1747A /* XMPPSRVResolver.m in Sources */,
 				4E0B5BC61B33BCED00C1747A /* NSXMLElement+XEP_0297.m in Sources */,
 				4E0B5BC81B33BCED00C1747A /* XMPPMessage+XEP_0308.m in Sources */,
