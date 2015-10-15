@@ -32,4 +32,15 @@
  */
 + (UIImage *)createImageWithString:(NSString *)base64String;
 
+/**
+ *  将图片转换为圆角图
+ *
+ *  @param image 图片
+ *  @param size  size
+ *  @param r     圆角半径
+ *
+ *  @return 圆角图
+ */
++ (id)createRoundedRectImage:(UIImage*)image size:(CGSize)size radius:(NSInteger)r;
+
 @end
