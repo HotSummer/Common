@@ -352,6 +352,52 @@
 		79AF9EBF1BB3128500D6AC08 /* SZTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9EB91BB3128500D6AC08 /* SZTableViewController.m */; };
 		79AF9EC01BB3128500D6AC08 /* SZViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 79AF9EBA1BB3128500D6AC08 /* SZViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79AF9EC11BB3128500D6AC08 /* SZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9EBB1BB3128500D6AC08 /* SZViewController.m */; };
+		AE40CEE41C71C0280072A125 /* SZModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CEE21C71C0280072A125 /* SZModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CEE51C71C0280072A125 /* SZModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE40CEE31C71C0280072A125 /* SZModel.m */; };
+		AE40CF171C71E6610072A125 /* NetConfigModelDefaultManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CEF21C71E6610072A125 /* NetConfigModelDefaultManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF181C71E6610072A125 /* NetConfigModelDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE40CEF31C71E6610072A125 /* NetConfigModelDefaultManager.m */; };
+		AE40CF191C71E6610072A125 /* NetConfigDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CEF51C71E6610072A125 /* NetConfigDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF1A1C71E6610072A125 /* NetConfigInputProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CEF61C71E6610072A125 /* NetConfigInputProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF1B1C71E6610072A125 /* NetConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CEF71C71E6610072A125 /* NetConfigManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF1C1C71E6610072A125 /* NetConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE40CEF81C71E6610072A125 /* NetConfigManager.m */; };
+		AE40CF1D1C71E6610072A125 /* NetConfigModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CEF91C71E6610072A125 /* NetConfigModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF1E1C71E6610072A125 /* NetConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE40CEFA1C71E6610072A125 /* NetConfigModel.m */; };
+		AE40CF1F1C71E6610072A125 /* NetConfigModelProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CEFB1C71E6610072A125 /* NetConfigModelProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF201C71E6610072A125 /* NetConfigReflectProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CEFC1C71E6610072A125 /* NetConfigReflectProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF211C71E6610072A125 /* NetConfigRequestDataProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CEFD1C71E6610072A125 /* NetConfigRequestDataProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF221C71E6610072A125 /* NetConfigRequestProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CEFE1C71E6610072A125 /* NetConfigRequestProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF231C71E6610072A125 /* NetConfigSignProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CEFF1C71E6610072A125 /* NetConfigSignProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF241C71E6610072A125 /* NetConfigInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CF011C71E6610072A125 /* NetConfigInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF251C71E6610072A125 /* NetConfigInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AE40CF021C71E6610072A125 /* NetConfigInput.m */; };
+		AE40CF261C71E6610072A125 /* WMNetConfigInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CF031C71E6610072A125 /* WMNetConfigInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF271C71E6610072A125 /* WMNetConfigInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AE40CF041C71E6610072A125 /* WMNetConfigInput.m */; };
+		AE40CF281C71E6610072A125 /* JSONModel+VSWMJSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CF061C71E6610072A125 /* JSONModel+VSWMJSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF291C71E6610072A125 /* JSONModel+VSWMJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE40CF071C71E6610072A125 /* JSONModel+VSWMJSONModel.m */; };
+		AE40CF2A1C71E6610072A125 /* NetConfigDefaultReflect.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CF081C71E6610072A125 /* NetConfigDefaultReflect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF2B1C71E6610072A125 /* NetConfigDefaultReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = AE40CF091C71E6610072A125 /* NetConfigDefaultReflect.m */; };
+		AE40CF2C1C71E6610072A125 /* AFNetWorkRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CF0B1C71E6610072A125 /* AFNetWorkRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF2D1C71E6610072A125 /* AFNetWorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AE40CF0C1C71E6610072A125 /* AFNetWorkRequest.m */; };
+		AE40CF2E1C71E6610072A125 /* WMAFNetWorkRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CF0D1C71E6610072A125 /* WMAFNetWorkRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF2F1C71E6610072A125 /* WMAFNetWorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AE40CF0E1C71E6610072A125 /* WMAFNetWorkRequest.m */; };
+		AE40CF301C71E6610072A125 /* NetConfigRequestDataDefaultManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CF101C71E6610072A125 /* NetConfigRequestDataDefaultManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF311C71E6610072A125 /* NetConfigRequestDataDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE40CF111C71E6610072A125 /* NetConfigRequestDataDefaultManager.m */; };
+		AE40CF321C71E6610072A125 /* NetConfigDefaultSign.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CF131C71E6610072A125 /* NetConfigDefaultSign.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF331C71E6610072A125 /* NetConfigDefaultSign.m in Sources */ = {isa = PBXBuildFile; fileRef = AE40CF141C71E6610072A125 /* NetConfigDefaultSign.m */; };
+		AE40CF341C71E6610072A125 /* WMNetConfigSign.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CF151C71E6610072A125 /* WMNetConfigSign.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF351C71E6610072A125 /* WMNetConfigSign.m in Sources */ = {isa = PBXBuildFile; fileRef = AE40CF161C71E6610072A125 /* WMNetConfigSign.m */; };
+		AE40CF3B1C71F3B00072A125 /* NSObject+Runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = AE40CF391C71F3B00072A125 /* NSObject+Runtime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE40CF3C1C71F3B00072A125 /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = AE40CF3A1C71F3B00072A125 /* NSObject+Runtime.m */; };
+		AE8F6D2D1C6A06D20028D290 /* SZTableViewViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AE8F6D2B1C6A06D20028D290 /* SZTableViewViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE8F6D2E1C6A06D20028D290 /* SZTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8F6D2C1C6A06D20028D290 /* SZTableViewViewController.m */; };
+		AE8F6D301C6A0EB40028D290 /* SZUIInitProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AE8F6D2F1C6A0EB40028D290 /* SZUIInitProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE8F6D331C6A0F920028D290 /* SZView.h in Headers */ = {isa = PBXBuildFile; fileRef = AE8F6D311C6A0F920028D290 /* SZView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE8F6D341C6A0F920028D290 /* SZView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8F6D321C6A0F920028D290 /* SZView.m */; };
+		AE8F6D371C6A11410028D290 /* SZTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AE8F6D351C6A11410028D290 /* SZTableCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE8F6D381C6A11410028D290 /* SZTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8F6D361C6A11410028D290 /* SZTableCell.m */; };
+		AE8F6D3B1C7183F30028D290 /* SZNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = AE8F6D391C7183F30028D290 /* SZNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE8F6D3C1C7183F30028D290 /* SZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8F6D3A1C7183F30028D290 /* SZNavigationController.m */; };
+		C47CEF571C73333A008B017A /* SZController.h in Headers */ = {isa = PBXBuildFile; fileRef = C47CEF551C73333A008B017A /* SZController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C47CEF581C73333A008B017A /* SZController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47CEF561C73333A008B017A /* SZController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -709,6 +755,52 @@
 		79AF9EB91BB3128500D6AC08 /* SZTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTableViewController.m; sourceTree = "<group>"; };
 		79AF9EBA1BB3128500D6AC08 /* SZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZViewController.h; sourceTree = "<group>"; };
 		79AF9EBB1BB3128500D6AC08 /* SZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZViewController.m; sourceTree = "<group>"; };
+		AE40CEE21C71C0280072A125 /* SZModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZModel.h; sourceTree = "<group>"; };
+		AE40CEE31C71C0280072A125 /* SZModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZModel.m; sourceTree = "<group>"; };
+		AE40CEF21C71E6610072A125 /* NetConfigModelDefaultManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigModelDefaultManager.h; sourceTree = "<group>"; };
+		AE40CEF31C71E6610072A125 /* NetConfigModelDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigModelDefaultManager.m; sourceTree = "<group>"; };
+		AE40CEF51C71E6610072A125 /* NetConfigDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigDefine.h; sourceTree = "<group>"; };
+		AE40CEF61C71E6610072A125 /* NetConfigInputProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigInputProtocol.h; sourceTree = "<group>"; };
+		AE40CEF71C71E6610072A125 /* NetConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigManager.h; sourceTree = "<group>"; };
+		AE40CEF81C71E6610072A125 /* NetConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigManager.m; sourceTree = "<group>"; };
+		AE40CEF91C71E6610072A125 /* NetConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigModel.h; sourceTree = "<group>"; };
+		AE40CEFA1C71E6610072A125 /* NetConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigModel.m; sourceTree = "<group>"; };
+		AE40CEFB1C71E6610072A125 /* NetConfigModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigModelProtocol.h; sourceTree = "<group>"; };
+		AE40CEFC1C71E6610072A125 /* NetConfigReflectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigReflectProtocol.h; sourceTree = "<group>"; };
+		AE40CEFD1C71E6610072A125 /* NetConfigRequestDataProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigRequestDataProtocol.h; sourceTree = "<group>"; };
+		AE40CEFE1C71E6610072A125 /* NetConfigRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigRequestProtocol.h; sourceTree = "<group>"; };
+		AE40CEFF1C71E6610072A125 /* NetConfigSignProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigSignProtocol.h; sourceTree = "<group>"; };
+		AE40CF011C71E6610072A125 /* NetConfigInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigInput.h; sourceTree = "<group>"; };
+		AE40CF021C71E6610072A125 /* NetConfigInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigInput.m; sourceTree = "<group>"; };
+		AE40CF031C71E6610072A125 /* WMNetConfigInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNetConfigInput.h; sourceTree = "<group>"; };
+		AE40CF041C71E6610072A125 /* WMNetConfigInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNetConfigInput.m; sourceTree = "<group>"; };
+		AE40CF061C71E6610072A125 /* JSONModel+VSWMJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+VSWMJSONModel.h"; sourceTree = "<group>"; };
+		AE40CF071C71E6610072A125 /* JSONModel+VSWMJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+VSWMJSONModel.m"; sourceTree = "<group>"; };
+		AE40CF081C71E6610072A125 /* NetConfigDefaultReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigDefaultReflect.h; sourceTree = "<group>"; };
+		AE40CF091C71E6610072A125 /* NetConfigDefaultReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigDefaultReflect.m; sourceTree = "<group>"; };
+		AE40CF0B1C71E6610072A125 /* AFNetWorkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetWorkRequest.h; sourceTree = "<group>"; };
+		AE40CF0C1C71E6610072A125 /* AFNetWorkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetWorkRequest.m; sourceTree = "<group>"; };
+		AE40CF0D1C71E6610072A125 /* WMAFNetWorkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMAFNetWorkRequest.h; sourceTree = "<group>"; };
+		AE40CF0E1C71E6610072A125 /* WMAFNetWorkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMAFNetWorkRequest.m; sourceTree = "<group>"; };
+		AE40CF101C71E6610072A125 /* NetConfigRequestDataDefaultManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigRequestDataDefaultManager.h; sourceTree = "<group>"; };
+		AE40CF111C71E6610072A125 /* NetConfigRequestDataDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigRequestDataDefaultManager.m; sourceTree = "<group>"; };
+		AE40CF131C71E6610072A125 /* NetConfigDefaultSign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigDefaultSign.h; sourceTree = "<group>"; };
+		AE40CF141C71E6610072A125 /* NetConfigDefaultSign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigDefaultSign.m; sourceTree = "<group>"; };
+		AE40CF151C71E6610072A125 /* WMNetConfigSign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNetConfigSign.h; sourceTree = "<group>"; };
+		AE40CF161C71E6610072A125 /* WMNetConfigSign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNetConfigSign.m; sourceTree = "<group>"; };
+		AE40CF391C71F3B00072A125 /* NSObject+Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Runtime.h"; sourceTree = "<group>"; };
+		AE40CF3A1C71F3B00072A125 /* NSObject+Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Runtime.m"; sourceTree = "<group>"; };
+		AE8F6D2B1C6A06D20028D290 /* SZTableViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTableViewViewController.h; sourceTree = "<group>"; };
+		AE8F6D2C1C6A06D20028D290 /* SZTableViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTableViewViewController.m; sourceTree = "<group>"; };
+		AE8F6D2F1C6A0EB40028D290 /* SZUIInitProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZUIInitProtocol.h; sourceTree = "<group>"; };
+		AE8F6D311C6A0F920028D290 /* SZView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZView.h; sourceTree = "<group>"; };
+		AE8F6D321C6A0F920028D290 /* SZView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZView.m; sourceTree = "<group>"; };
+		AE8F6D351C6A11410028D290 /* SZTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTableCell.h; sourceTree = "<group>"; };
+		AE8F6D361C6A11410028D290 /* SZTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTableCell.m; sourceTree = "<group>"; };
+		AE8F6D391C7183F30028D290 /* SZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZNavigationController.h; sourceTree = "<group>"; };
+		AE8F6D3A1C7183F30028D290 /* SZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZNavigationController.m; sourceTree = "<group>"; };
+		C47CEF551C73333A008B017A /* SZController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZController.h; sourceTree = "<group>"; };
+		C47CEF561C73333A008B017A /* SZController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -761,6 +853,9 @@
 		21210B7919B8C162006199C3 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				C47CEF541C73333A008B017A /* Controller */,
+				AE40CEF01C71E6610072A125 /* NetConfigRequest */,
+				AE40CEE11C71C0050072A125 /* Model */,
 				79AF9EB51BB3128500D6AC08 /* UI */,
 				4EC765C71B29396400F0B4A2 /* XMPP */,
 				4E6B3A521B2591CA00CA08E0 /* Category */,
@@ -1757,8 +1852,131 @@
 				79AF9EB91BB3128500D6AC08 /* SZTableViewController.m */,
 				79AF9EBA1BB3128500D6AC08 /* SZViewController.h */,
 				79AF9EBB1BB3128500D6AC08 /* SZViewController.m */,
+				AE8F6D2B1C6A06D20028D290 /* SZTableViewViewController.h */,
+				AE8F6D2C1C6A06D20028D290 /* SZTableViewViewController.m */,
+				AE8F6D2F1C6A0EB40028D290 /* SZUIInitProtocol.h */,
+				AE8F6D311C6A0F920028D290 /* SZView.h */,
+				AE8F6D321C6A0F920028D290 /* SZView.m */,
+				AE8F6D351C6A11410028D290 /* SZTableCell.h */,
+				AE8F6D361C6A11410028D290 /* SZTableCell.m */,
+				AE8F6D391C7183F30028D290 /* SZNavigationController.h */,
+				AE8F6D3A1C7183F30028D290 /* SZNavigationController.m */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		AE40CEE11C71C0050072A125 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE40CEE21C71C0280072A125 /* SZModel.h */,
+				AE40CEE31C71C0280072A125 /* SZModel.m */,
+				AE40CF391C71F3B00072A125 /* NSObject+Runtime.h */,
+				AE40CF3A1C71F3B00072A125 /* NSObject+Runtime.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE40CEF01C71E6610072A125 /* NetConfigRequest */ = {
+			isa = PBXGroup;
+			children = (
+				AE40CEF11C71E6610072A125 /* ModelDataSource */,
+				AE40CEF41C71E6610072A125 /* NetConfig */,
+				AE40CF001C71E6610072A125 /* NetConfigInput */,
+				AE40CF051C71E6610072A125 /* NetConfigReflect */,
+				AE40CF0A1C71E6610072A125 /* Request */,
+				AE40CF0F1C71E6610072A125 /* RequestData */,
+				AE40CF121C71E6610072A125 /* Sign */,
+			);
+			path = NetConfigRequest;
+			sourceTree = "<group>";
+		};
+		AE40CEF11C71E6610072A125 /* ModelDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				AE40CEF21C71E6610072A125 /* NetConfigModelDefaultManager.h */,
+				AE40CEF31C71E6610072A125 /* NetConfigModelDefaultManager.m */,
+			);
+			path = ModelDataSource;
+			sourceTree = "<group>";
+		};
+		AE40CEF41C71E6610072A125 /* NetConfig */ = {
+			isa = PBXGroup;
+			children = (
+				AE40CEF51C71E6610072A125 /* NetConfigDefine.h */,
+				AE40CEF61C71E6610072A125 /* NetConfigInputProtocol.h */,
+				AE40CEF71C71E6610072A125 /* NetConfigManager.h */,
+				AE40CEF81C71E6610072A125 /* NetConfigManager.m */,
+				AE40CEF91C71E6610072A125 /* NetConfigModel.h */,
+				AE40CEFA1C71E6610072A125 /* NetConfigModel.m */,
+				AE40CEFB1C71E6610072A125 /* NetConfigModelProtocol.h */,
+				AE40CEFC1C71E6610072A125 /* NetConfigReflectProtocol.h */,
+				AE40CEFD1C71E6610072A125 /* NetConfigRequestDataProtocol.h */,
+				AE40CEFE1C71E6610072A125 /* NetConfigRequestProtocol.h */,
+				AE40CEFF1C71E6610072A125 /* NetConfigSignProtocol.h */,
+			);
+			path = NetConfig;
+			sourceTree = "<group>";
+		};
+		AE40CF001C71E6610072A125 /* NetConfigInput */ = {
+			isa = PBXGroup;
+			children = (
+				AE40CF011C71E6610072A125 /* NetConfigInput.h */,
+				AE40CF021C71E6610072A125 /* NetConfigInput.m */,
+				AE40CF031C71E6610072A125 /* WMNetConfigInput.h */,
+				AE40CF041C71E6610072A125 /* WMNetConfigInput.m */,
+			);
+			path = NetConfigInput;
+			sourceTree = "<group>";
+		};
+		AE40CF051C71E6610072A125 /* NetConfigReflect */ = {
+			isa = PBXGroup;
+			children = (
+				AE40CF061C71E6610072A125 /* JSONModel+VSWMJSONModel.h */,
+				AE40CF071C71E6610072A125 /* JSONModel+VSWMJSONModel.m */,
+				AE40CF081C71E6610072A125 /* NetConfigDefaultReflect.h */,
+				AE40CF091C71E6610072A125 /* NetConfigDefaultReflect.m */,
+			);
+			path = NetConfigReflect;
+			sourceTree = "<group>";
+		};
+		AE40CF0A1C71E6610072A125 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				AE40CF0B1C71E6610072A125 /* AFNetWorkRequest.h */,
+				AE40CF0C1C71E6610072A125 /* AFNetWorkRequest.m */,
+				AE40CF0D1C71E6610072A125 /* WMAFNetWorkRequest.h */,
+				AE40CF0E1C71E6610072A125 /* WMAFNetWorkRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		AE40CF0F1C71E6610072A125 /* RequestData */ = {
+			isa = PBXGroup;
+			children = (
+				AE40CF101C71E6610072A125 /* NetConfigRequestDataDefaultManager.h */,
+				AE40CF111C71E6610072A125 /* NetConfigRequestDataDefaultManager.m */,
+			);
+			path = RequestData;
+			sourceTree = "<group>";
+		};
+		AE40CF121C71E6610072A125 /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				AE40CF131C71E6610072A125 /* NetConfigDefaultSign.h */,
+				AE40CF141C71E6610072A125 /* NetConfigDefaultSign.m */,
+				AE40CF151C71E6610072A125 /* WMNetConfigSign.h */,
+				AE40CF161C71E6610072A125 /* WMNetConfigSign.m */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
+		C47CEF541C73333A008B017A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C47CEF551C73333A008B017A /* SZController.h */,
+				C47CEF561C73333A008B017A /* SZController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1768,6 +1986,33 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C47CEF571C73333A008B017A /* SZController.h in Headers */,
+				AE40CF171C71E6610072A125 /* NetConfigModelDefaultManager.h in Headers */,
+				AE40CF2E1C71E6610072A125 /* WMAFNetWorkRequest.h in Headers */,
+				AE40CF281C71E6610072A125 /* JSONModel+VSWMJSONModel.h in Headers */,
+				AE40CF261C71E6610072A125 /* WMNetConfigInput.h in Headers */,
+				AE40CF211C71E6610072A125 /* NetConfigRequestDataProtocol.h in Headers */,
+				AE40CF1A1C71E6610072A125 /* NetConfigInputProtocol.h in Headers */,
+				AE40CF321C71E6610072A125 /* NetConfigDefaultSign.h in Headers */,
+				AE40CF201C71E6610072A125 /* NetConfigReflectProtocol.h in Headers */,
+				AE40CF341C71E6610072A125 /* WMNetConfigSign.h in Headers */,
+				AE40CF2C1C71E6610072A125 /* AFNetWorkRequest.h in Headers */,
+				AE40CF1F1C71E6610072A125 /* NetConfigModelProtocol.h in Headers */,
+				AE40CF301C71E6610072A125 /* NetConfigRequestDataDefaultManager.h in Headers */,
+				AE40CF231C71E6610072A125 /* NetConfigSignProtocol.h in Headers */,
+				AE40CF1D1C71E6610072A125 /* NetConfigModel.h in Headers */,
+				AE40CF2A1C71E6610072A125 /* NetConfigDefaultReflect.h in Headers */,
+				AE40CF221C71E6610072A125 /* NetConfigRequestProtocol.h in Headers */,
+				AE40CF241C71E6610072A125 /* NetConfigInput.h in Headers */,
+				AE40CF1B1C71E6610072A125 /* NetConfigManager.h in Headers */,
+				AE40CF191C71E6610072A125 /* NetConfigDefine.h in Headers */,
+				AE40CF3B1C71F3B00072A125 /* NSObject+Runtime.h in Headers */,
+				AE40CEE41C71C0280072A125 /* SZModel.h in Headers */,
+				AE8F6D3B1C7183F30028D290 /* SZNavigationController.h in Headers */,
+				AE8F6D2D1C6A06D20028D290 /* SZTableViewViewController.h in Headers */,
+				AE8F6D371C6A11410028D290 /* SZTableCell.h in Headers */,
+				AE8F6D331C6A0F920028D290 /* SZView.h in Headers */,
+				AE8F6D301C6A0EB40028D290 /* SZUIInitProtocol.h in Headers */,
 				79AF9EBE1BB3128500D6AC08 /* SZTableViewController.h in Headers */,
 				79AF9EC01BB3128500D6AC08 /* SZViewController.h in Headers */,
 				79AF9EBC1BB3128500D6AC08 /* SZBaseTabBarViewController.h in Headers */,
@@ -2032,12 +2277,15 @@
 				4E6B3A6B1B25A0BB00CA08E0 /* UIImageView+SDWebImage.m in Sources */,
 				4E0B5B8A1B33BCED00C1747A /* NSString+XEP_0106.m in Sources */,
 				4E0B5B411B33BCED00C1747A /* XMPPRoomHybridStorage.m in Sources */,
+				AE40CF181C71E6610072A125 /* NetConfigModelDefaultManager.m in Sources */,
 				4E6B3A3C1B2580DB00CA08E0 /* CommonDeviceConfig.m in Sources */,
 				4E0B5BDA1B33BCED00C1747A /* XMPPTimer.m in Sources */,
 				4E0B5B721B33BCED00C1747A /* XMPPResultSet.m in Sources */,
 				4E0B5B521B33BCED00C1747A /* XMPPRoom.m in Sources */,
+				AE40CF291C71E6610072A125 /* JSONModel+VSWMJSONModel.m in Sources */,
 				4E0B5B581B33BCED00C1747A /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */,
 				4E0B5B981B33BCED00C1747A /* XMPPMessageArchiving_Message_CoreDataObject.m in Sources */,
+				AE8F6D2E1C6A06D20028D290 /* SZTableViewViewController.m in Sources */,
 				4E0B5AF61B33BCED00C1747A /* XMPPIQ.m in Sources */,
 				4E0B5B3A1B33BCED00C1747A /* XMPPRoomCoreDataStorage.m in Sources */,
 				4E0B5B501B33BCED00C1747A /* XMPPMUC.m in Sources */,
@@ -2059,11 +2307,13 @@
 				4E0B5AEE1B33BCED00C1747A /* NSXMLElement+XMPP.m in Sources */,
 				4E6B3A451B25813300CA08E0 /* GTMBase64.m in Sources */,
 				4E0B5AF31B33BCED00C1747A /* XMPPElement.m in Sources */,
+				C47CEF581C73333A008B017A /* SZController.m in Sources */,
 				4E0B5BEB1B33BCED00C1747A /* DDDispatchQueueLogFormatter.m in Sources */,
 				4E0B5BA21B33BCED00C1747A /* XMPPMessage+XEP_0172.m in Sources */,
 				4E0B5BED1B33BCED00C1747A /* DDMultiFormatter.m in Sources */,
 				4E6B3A4C1B25851800CA08E0 /* CommonLocationManager.m in Sources */,
 				4E0B5B9A1B33BCED00C1747A /* XMPPMessageArchivingCoreDataStorage.m in Sources */,
+				AE8F6D3C1C7183F30028D290 /* SZNavigationController.m in Sources */,
 				4E0B5B821B33BCED00C1747A /* XMPPDateTimeProfiles.m in Sources */,
 				4E0B5B3F1B33BCED00C1747A /* XMPPRoomHybrid.xcdatamodeld in Sources */,
 				4E0B5BDC1B33BCED00C1747A /* GCDAsyncSocket.m in Sources */,
@@ -2080,10 +2330,13 @@
 				4E0B5BF31B33BCED00C1747A /* DDXMLDocument.m in Sources */,
 				4EF2110E1B3BFF7500D07F42 /* FriendModel.m in Sources */,
 				4E0B5AE61B33BCED00C1747A /* XMPPXOAuth2Google.m in Sources */,
+				AE40CF311C71E6610072A125 /* NetConfigRequestDataDefaultManager.m in Sources */,
 				4E0B5BE21B33BCED00C1747A /* DDFileLogger.m in Sources */,
 				4E0B5B331B33BCED00C1747A /* XMPPIQ+LastActivity.m in Sources */,
 				79AF9EBF1BB3128500D6AC08 /* SZTableViewController.m in Sources */,
 				4E0B5B161B33BCED00C1747A /* XMPPGroupCoreDataStorageObject.m in Sources */,
+				AE40CF331C71E6610072A125 /* NetConfigDefaultSign.m in Sources */,
+				AE8F6D381C6A11410028D290 /* SZTableCell.m in Sources */,
 				4E0B5B8F1B33BCED00C1747A /* XMPPCapsCoreDataStorageObject.m in Sources */,
 				4E0B5B0A1B33BCED00C1747A /* XMPPFileTransfer.m in Sources */,
 				4E0B5B6C1B33BCED00C1747A /* XMPPvCardTempModule.m in Sources */,
@@ -2091,6 +2344,7 @@
 				4E6B3A511B25885F00CA08E0 /* FileHelper.m in Sources */,
 				4E0B5B801B33BCED00C1747A /* NSDate+XMPPDateTimeProfiles.m in Sources */,
 				4E0B5AEA1B33BCED00C1747A /* NSData+XMPP.m in Sources */,
+				AE40CF271C71E6610072A125 /* WMNetConfigInput.m in Sources */,
 				4E0B5B4C1B33BCED00C1747A /* XMPPRoomOccupantMemoryStorageObject.m in Sources */,
 				4E0B5B4E1B33BCED00C1747A /* XMPPMessage+XEP0045.m in Sources */,
 				4E0B5B2D1B33BCED00C1747A /* XMPPIQ+JabberRPC.m in Sources */,
@@ -2110,12 +2364,17 @@
 				4E0B5B2F1B33BCED00C1747A /* XMPPIQ+JabberRPCResonse.m in Sources */,
 				4E0B5B271B33BCED00C1747A /* XMPPRoster.m in Sources */,
 				4E0B5B311B33BCED00C1747A /* XMPPJabberRPCModule.m in Sources */,
+				AE40CF251C71E6610072A125 /* NetConfigInput.m in Sources */,
+				AE40CF351C71E6610072A125 /* WMNetConfigSign.m in Sources */,
 				4E0B5B2B1B33BCED00C1747A /* XMPPSystemInputActivityMonitor.m in Sources */,
+				AE40CF2F1C71E6610072A125 /* WMAFNetWorkRequest.m in Sources */,
 				4E0B5AE41B33BCED00C1747A /* XMPPXFacebookPlatformAuthentication.m in Sources */,
 				4E0B5ADC1B33BCED00C1747A /* XMPPDeprecatedPlainAuthentication.m in Sources */,
+				AE40CF2B1C71E6610072A125 /* NetConfigDefaultReflect.m in Sources */,
 				4E0B5B7C1B33BCED00C1747A /* XMPPMessage+XEP_0066.m in Sources */,
 				4E0B5BC01B33BCED00C1747A /* XMPPMessage+XEP_0224.m in Sources */,
 				4E0B5B181B33BCED00C1747A /* XMPPResourceCoreDataStorageObject.m in Sources */,
+				AE40CF1C1C71E6610072A125 /* NetConfigManager.m in Sources */,
 				4E0B5AE21B33BCED00C1747A /* XMPPSCRAMSHA1Authentication.m in Sources */,
 				4E0B5B5A1B33BCED00C1747A /* XMPPvCardCoreDataStorage.m in Sources */,
 				4E0B5B121B33BCED00C1747A /* XMPPProcessOne.m in Sources */,
@@ -2138,6 +2397,7 @@
 				4E0B5ADE1B33BCED00C1747A /* XMPPDigestMD5Authentication.m in Sources */,
 				4E0B5B6E1B33BCED00C1747A /* XMPPvCardTempTel.m in Sources */,
 				4E0B5BA61B33BCED00C1747A /* XMPPMessage+XEP_0184.m in Sources */,
+				AE40CF2D1C71E6610072A125 /* AFNetWorkRequest.m in Sources */,
 				4E0B5B7E1B33BCED00C1747A /* XMPPRegistration.m in Sources */,
 				4E0B5BF71B33BCED00C1747A /* DDXMLNode.m in Sources */,
 				4E0B5BA41B33BCED00C1747A /* XMPPPresence+XEP_0172.m in Sources */,
@@ -2151,11 +2411,14 @@
 				4E0B5BC41B33BCED00C1747A /* XMPPMessageCarbons.m in Sources */,
 				4E0B5BD81B33BCED00C1747A /* XMPPStringPrep.m in Sources */,
 				4E6B3A561B2593E100CA08E0 /* NSDate+TPCategory.m in Sources */,
+				AE40CF3C1C71F3B00072A125 /* NSObject+Runtime.m in Sources */,
 				4E0B5B461B33BCED00C1747A /* XMPPRoomOccupantHybridMemoryStorageObject.m in Sources */,
 				4E0B5B031B33BCED00C1747A /* XMPPStream.m in Sources */,
 				4E0B5BD01B33BCED00C1747A /* GCDMulticastDelegate.m in Sources */,
+				AE40CEE51C71C0280072A125 /* SZModel.m in Sources */,
 				4E0B5B011B33BCED00C1747A /* XMPPPresence.m in Sources */,
 				4E0B5B701B33BCED00C1747A /* NSXMLElement+XEP_0059.m in Sources */,
+				AE40CF1E1C71E6610072A125 /* NetConfigModel.m in Sources */,
 				4E0B5B211B33BCED00C1747A /* XMPPRosterMemoryStorage.m in Sources */,
 				4E0B5B9E1B33BCED00C1747A /* XMPPURI.m in Sources */,
 				4E0B5B931B33BCED00C1747A /* XMPPCapabilities.m in Sources */,
@@ -2179,6 +2442,7 @@
 				4E0B5BC81B33BCED00C1747A /* XMPPMessage+XEP_0308.m in Sources */,
 				4E0B5B351B33BCED00C1747A /* XMPPLastActivity.m in Sources */,
 				4E0B5BAA1B33BCED00C1747A /* XMPPBlocking.m in Sources */,
+				AE8F6D341C6A0F920028D290 /* SZView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2210,6 +2474,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2247,6 +2512,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -2266,6 +2532,7 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/frameworks";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -2280,6 +2547,9 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"\"$(SRCROOT)/../../Pods/Headers/Public/RegexKitLite\"",
 					"\"$(SRCROOT)/../../Pods/Headers/Public/XMPPFramework\"",
+					"\"$(SRCROOT)/../../Pods/Headers/Public/Masonry\"",
+					"\"$(SRCROOT)/../../Pods/Headers/Public/JSONModel\"",
+					"\"$(SRCROOT)/../../Pods/Headers/Public/AFNetworking\"",
 					/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "SDK/$(PROJECT_NAME)-Info.plist";
@@ -2306,6 +2576,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/frameworks";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -2316,6 +2587,9 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"\"$(SRCROOT)/../../Pods/Headers/Public/RegexKitLite\"",
 					"\"$(SRCROOT)/../../Pods/Headers/Public/XMPPFramework\"",
+					"\"$(SRCROOT)/../../Pods/Headers/Public/Masonry\"",
+					"\"$(SRCROOT)/../../Pods/Headers/Public/JSONModel\"",
+					"\"$(SRCROOT)/../../Pods/Headers/Public/AFNetworking\"",
 					/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "SDK/$(PROJECT_NAME)-Info.plist";
@@ -2339,6 +2613,7 @@
 		497E511519EFA52C000E49F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				PRODUCT_NAME = Common;
 			};
 			name = Debug;
@@ -2346,6 +2621,7 @@
 		497E511619EFA52C000E49F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				PRODUCT_NAME = Common;
 			};
 			name = Release;
