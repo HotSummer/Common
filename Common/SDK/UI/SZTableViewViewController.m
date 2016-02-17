@@ -12,10 +12,6 @@
 #import <Masonry.h>
 
 @interface SZTableViewViewController ()
-<
-UITableViewDataSource,
-UITableViewDelegate
->
 
 @end
 

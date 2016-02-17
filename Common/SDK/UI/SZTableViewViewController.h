@@ -10,6 +10,10 @@
 #import "SZViewController.h"
 
 @interface SZTableViewViewController : SZViewController
+<
+UITableViewDataSource,
+UITableViewDelegate
+>
 
 @property(nonatomic, strong) UITableView *tableview;
 
