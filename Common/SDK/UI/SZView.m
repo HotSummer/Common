@@ -10,15 +10,15 @@
 
 @implementation SZView
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    if(self)
-    {
-        [self sz_setInit];
-    }
-    return self;
-}
+//- (instancetype)initWithCoder:(NSCoder *)aDecoder
+//{
+//    self = [super initWithCoder:aDecoder];
+//    if(self)
+//    {
+//        [self sz_setInit];
+//    }
+//    return self;
+//}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -30,9 +30,13 @@
     return self;
 }
 
-- (void)wy_setInit
+- (void)awakeFromNib
 {
+    [super awakeFromNib];
+    [self sz_setInit];
+    
     
 }
+
 
 @end
