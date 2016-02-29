@@ -396,6 +396,8 @@
 		AE8F6D381C6A11410028D290 /* SZTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8F6D361C6A11410028D290 /* SZTableCell.m */; };
 		AE8F6D3B1C7183F30028D290 /* SZNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = AE8F6D391C7183F30028D290 /* SZNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE8F6D3C1C7183F30028D290 /* SZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8F6D3A1C7183F30028D290 /* SZNavigationController.m */; };
+		C44BF2181C7DA0F30061CF69 /* FXBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = C44BF2161C7DA0F30061CF69 /* FXBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C44BF2191C7DA0F30061CF69 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = C44BF2171C7DA0F30061CF69 /* FXBlurView.m */; };
 		C47CEF571C73333A008B017A /* SZController.h in Headers */ = {isa = PBXBuildFile; fileRef = C47CEF551C73333A008B017A /* SZController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C47CEF581C73333A008B017A /* SZController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47CEF561C73333A008B017A /* SZController.m */; };
 /* End PBXBuildFile section */
@@ -799,6 +801,8 @@
 		AE8F6D361C6A11410028D290 /* SZTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTableCell.m; sourceTree = "<group>"; };
 		AE8F6D391C7183F30028D290 /* SZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZNavigationController.h; sourceTree = "<group>"; };
 		AE8F6D3A1C7183F30028D290 /* SZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZNavigationController.m; sourceTree = "<group>"; };
+		C44BF2161C7DA0F30061CF69 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		C44BF2171C7DA0F30061CF69 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		C47CEF551C73333A008B017A /* SZController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZController.h; sourceTree = "<group>"; };
 		C47CEF561C73333A008B017A /* SZController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -853,6 +857,7 @@
 		21210B7919B8C162006199C3 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				C44BF2141C7DA0F30061CF69 /* ThirdPart */,
 				C47CEF541C73333A008B017A /* Controller */,
 				AE40CEF01C71E6610072A125 /* NetConfigRequest */,
 				AE40CEE11C71C0050072A125 /* Model */,
@@ -1970,6 +1975,23 @@
 			path = Sign;
 			sourceTree = "<group>";
 		};
+		C44BF2141C7DA0F30061CF69 /* ThirdPart */ = {
+			isa = PBXGroup;
+			children = (
+				C44BF2151C7DA0F30061CF69 /* FXBlurView */,
+			);
+			path = ThirdPart;
+			sourceTree = "<group>";
+		};
+		C44BF2151C7DA0F30061CF69 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				C44BF2161C7DA0F30061CF69 /* FXBlurView.h */,
+				C44BF2171C7DA0F30061CF69 /* FXBlurView.m */,
+			);
+			path = FXBlurView;
+			sourceTree = "<group>";
+		};
 		C47CEF541C73333A008B017A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -1986,6 +2008,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C44BF2181C7DA0F30061CF69 /* FXBlurView.h in Headers */,
 				C47CEF571C73333A008B017A /* SZController.h in Headers */,
 				AE40CF171C71E6610072A125 /* NetConfigModelDefaultManager.h in Headers */,
 				AE40CF2E1C71E6610072A125 /* WMAFNetWorkRequest.h in Headers */,
@@ -2413,6 +2436,7 @@
 				4E6B3A561B2593E100CA08E0 /* NSDate+TPCategory.m in Sources */,
 				AE40CF3C1C71F3B00072A125 /* NSObject+Runtime.m in Sources */,
 				4E0B5B461B33BCED00C1747A /* XMPPRoomOccupantHybridMemoryStorageObject.m in Sources */,
+				C44BF2191C7DA0F30061CF69 /* FXBlurView.m in Sources */,
 				4E0B5B031B33BCED00C1747A /* XMPPStream.m in Sources */,
 				4E0B5BD01B33BCED00C1747A /* GCDMulticastDelegate.m in Sources */,
 				AE40CEE51C71C0280072A125 /* SZModel.m in Sources */,
