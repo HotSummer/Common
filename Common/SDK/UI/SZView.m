@@ -25,7 +25,9 @@
     self = [super initWithFrame:frame];
     if(self)
     {
-        [self sz_setInit];
+        if ([self respondsToSelector:@selector(sz_setInit)]) {
+            [self sz_setInit];
+        }
     }
     return self;
 }
@@ -33,9 +35,9 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    [self sz_setInit];
-    
-    
+    if ([self respondsToSelector:@selector(sz_setInit)]) {
+        [self sz_setInit];
+    }
 }
 
 
