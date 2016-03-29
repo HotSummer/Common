@@ -400,6 +400,8 @@
 		C44BF2191C7DA0F30061CF69 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = C44BF2171C7DA0F30061CF69 /* FXBlurView.m */; };
 		C47CEF571C73333A008B017A /* SZController.h in Headers */ = {isa = PBXBuildFile; fileRef = C47CEF551C73333A008B017A /* SZController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C47CEF581C73333A008B017A /* SZController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47CEF561C73333A008B017A /* SZController.m */; };
+		C4DAE23D1CAACE2E00ACB6AF /* SwipeView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4DAE23B1CAACE2E00ACB6AF /* SwipeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4DAE23E1CAACE2E00ACB6AF /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DAE23C1CAACE2E00ACB6AF /* SwipeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -805,6 +807,8 @@
 		C44BF2171C7DA0F30061CF69 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		C47CEF551C73333A008B017A /* SZController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZController.h; sourceTree = "<group>"; };
 		C47CEF561C73333A008B017A /* SZController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZController.m; sourceTree = "<group>"; };
+		C4DAE23B1CAACE2E00ACB6AF /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
+		C4DAE23C1CAACE2E00ACB6AF /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1978,6 +1982,7 @@
 		C44BF2141C7DA0F30061CF69 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				C4DAE23A1CAACE2E00ACB6AF /* SwipeView */,
 				C44BF2151C7DA0F30061CF69 /* FXBlurView */,
 			);
 			path = ThirdPart;
@@ -2001,6 +2006,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		C4DAE23A1CAACE2E00ACB6AF /* SwipeView */ = {
+			isa = PBXGroup;
+			children = (
+				C4DAE23B1CAACE2E00ACB6AF /* SwipeView.h */,
+				C4DAE23C1CAACE2E00ACB6AF /* SwipeView.m */,
+			);
+			path = SwipeView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2008,6 +2022,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4DAE23D1CAACE2E00ACB6AF /* SwipeView.h in Headers */,
 				C44BF2181C7DA0F30061CF69 /* FXBlurView.h in Headers */,
 				C47CEF571C73333A008B017A /* SZController.h in Headers */,
 				AE40CF171C71E6610072A125 /* NetConfigModelDefaultManager.h in Headers */,
@@ -2302,6 +2317,7 @@
 				4E0B5B411B33BCED00C1747A /* XMPPRoomHybridStorage.m in Sources */,
 				AE40CF181C71E6610072A125 /* NetConfigModelDefaultManager.m in Sources */,
 				4E6B3A3C1B2580DB00CA08E0 /* CommonDeviceConfig.m in Sources */,
+				C4DAE23E1CAACE2E00ACB6AF /* SwipeView.m in Sources */,
 				4E0B5BDA1B33BCED00C1747A /* XMPPTimer.m in Sources */,
 				4E0B5B721B33BCED00C1747A /* XMPPResultSet.m in Sources */,
 				4E0B5B521B33BCED00C1747A /* XMPPRoom.m in Sources */,
