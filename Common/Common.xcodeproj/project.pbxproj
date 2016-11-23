@@ -402,6 +402,12 @@
 		C47CEF581C73333A008B017A /* SZController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47CEF561C73333A008B017A /* SZController.m */; };
 		C4DAE23D1CAACE2E00ACB6AF /* SwipeView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4DAE23B1CAACE2E00ACB6AF /* SwipeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4DAE23E1CAACE2E00ACB6AF /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DAE23C1CAACE2E00ACB6AF /* SwipeView.m */; };
+		C4E8B7D51CFEAB24006A134E /* SZTableDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E8B7D31CFEAB24006A134E /* SZTableDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4E8B7D61CFEAB24006A134E /* SZTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E8B7D41CFEAB24006A134E /* SZTableDataSource.m */; };
+		C4E8B7D91CFEB781006A134E /* SZTableViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E8B7D71CFEB781006A134E /* SZTableViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4E8B7DA1CFEB781006A134E /* SZTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E8B7D81CFEB781006A134E /* SZTableViewDelegate.m */; };
+		C4E8B7DD1CFEBB03006A134E /* TableViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E8B7DB1CFEBB03006A134E /* TableViewManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4E8B7DE1CFEBB03006A134E /* TableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E8B7DC1CFEBB03006A134E /* TableViewManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -809,6 +815,12 @@
 		C47CEF561C73333A008B017A /* SZController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZController.m; sourceTree = "<group>"; };
 		C4DAE23B1CAACE2E00ACB6AF /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
 		C4DAE23C1CAACE2E00ACB6AF /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
+		C4E8B7D31CFEAB24006A134E /* SZTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTableDataSource.h; sourceTree = "<group>"; };
+		C4E8B7D41CFEAB24006A134E /* SZTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTableDataSource.m; sourceTree = "<group>"; };
+		C4E8B7D71CFEB781006A134E /* SZTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTableViewDelegate.h; sourceTree = "<group>"; };
+		C4E8B7D81CFEB781006A134E /* SZTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTableViewDelegate.m; sourceTree = "<group>"; };
+		C4E8B7DB1CFEBB03006A134E /* TableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewManager.h; sourceTree = "<group>"; };
+		C4E8B7DC1CFEBB03006A134E /* TableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1870,6 +1882,12 @@
 				AE8F6D361C6A11410028D290 /* SZTableCell.m */,
 				AE8F6D391C7183F30028D290 /* SZNavigationController.h */,
 				AE8F6D3A1C7183F30028D290 /* SZNavigationController.m */,
+				C4E8B7D31CFEAB24006A134E /* SZTableDataSource.h */,
+				C4E8B7D41CFEAB24006A134E /* SZTableDataSource.m */,
+				C4E8B7D71CFEB781006A134E /* SZTableViewDelegate.h */,
+				C4E8B7D81CFEB781006A134E /* SZTableViewDelegate.m */,
+				C4E8B7DB1CFEBB03006A134E /* TableViewManager.h */,
+				C4E8B7DC1CFEBB03006A134E /* TableViewManager.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -2022,6 +2040,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4E8B7DD1CFEBB03006A134E /* TableViewManager.h in Headers */,
+				C4E8B7D51CFEAB24006A134E /* SZTableDataSource.h in Headers */,
+				C4E8B7D91CFEB781006A134E /* SZTableViewDelegate.h in Headers */,
 				C4DAE23D1CAACE2E00ACB6AF /* SwipeView.h in Headers */,
 				C44BF2181C7DA0F30061CF69 /* FXBlurView.h in Headers */,
 				C47CEF571C73333A008B017A /* SZController.h in Headers */,
@@ -2324,6 +2345,7 @@
 				AE40CF291C71E6610072A125 /* JSONModel+VSWMJSONModel.m in Sources */,
 				4E0B5B581B33BCED00C1747A /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */,
 				4E0B5B981B33BCED00C1747A /* XMPPMessageArchiving_Message_CoreDataObject.m in Sources */,
+				C4E8B7D61CFEAB24006A134E /* SZTableDataSource.m in Sources */,
 				AE8F6D2E1C6A06D20028D290 /* SZTableViewViewController.m in Sources */,
 				4E0B5AF61B33BCED00C1747A /* XMPPIQ.m in Sources */,
 				4E0B5B3A1B33BCED00C1747A /* XMPPRoomCoreDataStorage.m in Sources */,
@@ -2382,8 +2404,10 @@
 				4E0B5B741B33BCED00C1747A /* XMPPIQ+XEP_0060.m in Sources */,
 				4E6B3A511B25885F00CA08E0 /* FileHelper.m in Sources */,
 				4E0B5B801B33BCED00C1747A /* NSDate+XMPPDateTimeProfiles.m in Sources */,
+				C4E8B7DE1CFEBB03006A134E /* TableViewManager.m in Sources */,
 				4E0B5AEA1B33BCED00C1747A /* NSData+XMPP.m in Sources */,
 				AE40CF271C71E6610072A125 /* WMNetConfigInput.m in Sources */,
+				C4E8B7DA1CFEB781006A134E /* SZTableViewDelegate.m in Sources */,
 				4E0B5B4C1B33BCED00C1747A /* XMPPRoomOccupantMemoryStorageObject.m in Sources */,
 				4E0B5B4E1B33BCED00C1747A /* XMPPMessage+XEP0045.m in Sources */,
 				4E0B5B2D1B33BCED00C1747A /* XMPPIQ+JabberRPC.m in Sources */,

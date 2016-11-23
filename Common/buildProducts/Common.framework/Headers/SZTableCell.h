@@ -22,15 +22,25 @@
  */
 + (CGFloat)sz_cellHeightWithModel:(id)model withSuperWidth:(CGFloat)t_superWidth;
 
+///**
+// *  更新cell数据
+// *
+// *  @param model        数据
+// *  @param t_superWidth cell父试图（tableview）宽度
+// *  @param indexPath    位置
+// *  @param delegate     代理
+// */
+//- (void)sz_updateCellInfoWithModel:(id)model withSuperWidth:(CGFloat)t_superWidth indexPath:(NSIndexPath*)indexPath del:(id)delegate;
+
 /**
  *  更新cell数据
  *
  *  @param model        数据
  *  @param t_superWidth cell父试图（tableview）宽度
  *  @param indexPath    位置
- *  @param delegate     代理
  */
-- (void)sz_updateCellInfoWithModel:(id)model withSuperWidth:(CGFloat)t_superWidth indexPath:(NSIndexPath*)indexPath del:(id)delegate;
+- (void)sz_updateCellInfoWithModel:(id)model withSuperWidth:(CGFloat)t_superWidth indexPath:(NSIndexPath *)indexPath;
+
 @end
 
 @interface SZTableCell : UITableViewCell

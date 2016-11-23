@@ -182,8 +182,8 @@
         {
             if(t_currentRow < [sectionInfos count])
             {
-                if ([cell respondsToSelector:@selector(sz_updateCellInfoWithModel:withSuperWidth:indexPath:del:)]) {
-                    [(SZTableCell *)cell sz_updateCellInfoWithModel:sectionInfos[t_currentRow] withSuperWidth:CGRectGetWidth(self.tableview.frame) indexPath:indexPath del:self];
+                if ([cell respondsToSelector:@selector(sz_updateCellInfoWithModel:withSuperWidth:indexPath:)]) {
+                    [(SZTableCell *)cell sz_updateCellInfoWithModel:sectionInfos[t_currentRow] withSuperWidth:CGRectGetWidth(self.tableview.frame) indexPath:indexPath];
                 }   
             }
             else
